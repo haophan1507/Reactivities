@@ -9,8 +9,8 @@ function ActivityList() {
    const { groupedActivities } = activityStore;
    return (
       <Fragment>
-         {groupedActivities.map(([group, activities]) => (
-            <Fragment>
+         {groupedActivities.map(([group, activities], index) => (
+            <Fragment key={index}>
                <Header sub color='teal'>
                   {group}
                </Header>
